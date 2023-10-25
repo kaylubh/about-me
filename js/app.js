@@ -9,6 +9,8 @@ let button = document.getElementById('playGame');
 button.addEventListener('click', guessingGame);
 
 function guessingGame (){
+  alert('Alright, ' + userName + ', let\'s get started!');
+
   let question1 = prompt('Is this true: I\'m an Army Veteran? Answer with YES or Y for TRUE and NO or N for FALSE');
   question1 = question1.toLowerCase();
   if (question1 === 'yes' || question1 === 'y') {
@@ -77,4 +79,35 @@ function guessingGame (){
     // console.log('Invalid answer');
     alert('Invalid answer');
   }
+
+  let question6 = prompt('Now let\'s try something different...What is my favorite number? Answer with a NUMBER between 1 and 10.');
+  question6 = parseInt(question6);
+  let question6Counter = 0;
+  while (question6 !== 7 && question6Counter < 3) {
+    if (question6 > 7) {
+      question6 = prompt('Try Again. That number was too high.');
+      question6 = parseInt(question6);
+      question6Counter++;
+    } else if (question6 < 7) {
+      question6 = prompt('Try Again. That number was too low.');
+      question6 = parseInt(question6);
+      question6Counter++;
+    } else {
+      question6 = prompt('Try Again. That wasn\'t a number.');
+      question6 = parseInt(question6);
+      question6Counter++;
+    }
+  }
+  if (question6 === 7 && question6Counter <= 3) {
+    alert('Correct! My favorite number is 7.');
+  } else {
+    alert('So Close! My favorite number is 7.');
+  }
+
+  let question7 = prompt('Now for the final and most difficult question...Guess one of the countries I would like to vacation in. Spelling matters but capitalization does not.');
+  question7 = question7.toLowerCase();
+  let question7Answers = ['spain', 'sweden', 'chile', 'south korea', 'australia', 'new zealand'];
+  let question7Counter = 0;
+
+
 }
