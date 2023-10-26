@@ -6,6 +6,8 @@ A simple website to introduce myself to the user. This page is learning tool to 
 
 ### Author: Caleb Hemphill
 
+Contributions from [Charlie](https://github.com/charriaga)
+
 ### Links and Resources
 
 ### Lighthouse Accessibility Report Score
