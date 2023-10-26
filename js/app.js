@@ -108,6 +108,29 @@ function guessingGame (){
   question7 = question7.toLowerCase();
   let question7Answers = ['spain', 'sweden', 'chile', 'south korea', 'australia', 'new zealand'];
   let question7Counter = 0;
-
+  let correctAnswer;
+  while (question7Counter < 5 && correctAnswer !== true) {
+    for (let i=0; i < question7Answers.length; i++) {
+      if (question7Answers[i] === question7) {
+        alert('Correct!');
+        correctAnswer = true;
+        break;
+      } else if (question7Counter >= 5) {
+        break;
+      }
+    }
+    if (correctAnswer !== true) {
+      question7 = prompt('Try Again...Guess one of the countries I would like to vacation in. Spelling matters but capitalization does not.');
+      question7 = question7.toLowerCase();
+      question7Counter++;
+    }
+  }
+  if (correctAnswer) {
+    alert('Great Guess! I want to visit these countries: ' + question7Answers);
+  } else {
+    alert('Good Guesses but I want to visit these countries: ' + question7Answers);
+  }
+  // classmates Immanuel and Andrea helped me create this loop
+  
 
 }
