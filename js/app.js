@@ -10,113 +10,37 @@ button.addEventListener('click', guessingGame);
 
 function guessingGame() {
   alert('Alright, ' + userName + ', let\'s get started!');
+
   let results = [];
+  let question1 = ['Is this true: I\'m an Army Veteran? Answer with YES or Y for TRUE and NO or N for FALSE', 'yes', 'y', 'no', 'n'];
+  let question2 = ['Is this true: I don\'t currently have any formal degrees but have attended some college? Answer with YES or Y for TRUE and NO or N for FALSE', 'yes', 'y', 'no', 'n'];
+  let question3 = ['Is this true: My favorite color is yellow? Answer with YES or Y for TRUE and NO or N for FALSE', 'no', 'n', 'yes', 'y'];
+  let question4 = ['Is this true: I think Penguins are the cutest things to ever exist? Answer with YES or Y for TRUE and NO or N for FALSE', 'yes', 'y', 'no', 'n'];
+  let question5 = ['Is this true: Eventually, I would like to be unemployed? Answer with YES or Y for TRUE and NO or N for FALSE', 'no', 'n', 'yes', 'y'];
 
-let question1 = ['Is this true: I\'m an Army Veteran? Answer with YES or Y for TRUE and NO or N for FALSE', 'yes', 'y', 'no', 'n'];
-let question2 = ['Is this true: I don\'t currently have any formal degrees but have attended some college? Answer with YES or Y for TRUE and NO or N for FALSE', 'yes', 'y', 'no', 'n'];
-let question3 = ['Is this true: My favorite color is yellow? Answer with YES or Y for TRUE and NO or N for FALSE', 'no', 'n', 'yes', 'y'];
-let question4 = ['Is this true: I think Penguins are the cutest things to ever exist? Answer with YES or Y for TRUE and NO or N for FALSE', 'yes', 'y', 'no', 'n'];
-let question5 = ['Is this true: Eventually, I would like to be unemployed? Answer with YES or Y for TRUE and NO or N for FALSE', 'no', 'n', 'yes', 'y'];
-
-  // question 1
+  // questions 1-5
   function askQuestion(question) {
-  let response = prompt(question[0]);
-  response = response.toLowerCase();
-  if (response === question[1] || response === question[2]) {
-    // console.log('Correct');
-    alert('Correct');
-    results.push(true);
-  } else if (response === question[3] || response === question[4]) {
-    // console.log('Incorrect');
-    alert('Incorrect');
-    results.push(false);
-  } else {
-    // console.log('Invalid answer');
-    alert('Invalid answer');
-    results.push(false);
+    let response = prompt(question[0]);
+    response = response.toLowerCase();
+    if (response === question[1] || response === question[2]) {
+      // console.log('Correct');
+      alert('Correct');
+      results.push(true);
+    } else if (response === question[3] || response === question[4]) {
+      // console.log('Incorrect');
+      alert('Incorrect');
+      results.push(false);
+    } else {
+      // console.log('Invalid answer');
+      alert('Invalid answer');
+      results.push(false);
+    }
   }
-  }
- 
-
-  for(let i = 0; i < 5; i += 1) {
+  for (let i = 0; i < 5; i += 1) {
     let questionHolder = [question1, question2, question3, question4, question5];
-
     askQuestion(questionHolder[i]);
   }
 
-
- /* // question 2
-  let question2 = prompt('Is this true: I don\'t currently have any formal degrees but have attended some college? Answer with YES or Y for TRUE and NO or N for FALSE');
-  question2 = question2.toLowerCase();
-  if (question2 === 'yes' || question2 === 'y') {
-    // console.log('Correct');
-    alert('Correct');
-    results.push(true);
-  } else if (question2 === 'no' || question2 === 'n') {
-    // console.log('Incorrect');
-    alert('Incorrect');
-    results.push(false);
-  } else {
-    // console.log('Invalid answer');
-    alert('Invalid answer');
-    results.push(false);
-  }
-
-  // question 3
-  let question3 = prompt('Is this true: My favorite color is yellow? Answer with YES or Y for TRUE and NO or N for FALSE');
-  question3 = question3.toLowerCase();
-  if (question3 === 'no' || question3 === 'n') {
-    // console.log('Correct');
-    alert('Correct');
-    alert('My favorite color is actually orange');
-    results.push(true);
-  } else if (question3 === 'yes' || question3 === 'y') {
-    // console.log('Incorrect');
-    alert('Incorrect');
-    alert('My favorite color is actually orange');
-    results.push(false);
-  } else {
-    // console.log('Invalid answer');
-    alert('Invalid answer');
-    results.push(false);
-  }
-
-  // question 4
-  let question4 = prompt('Is this true: I think Penguins are the cutest things to ever exist? Answer with YES or Y for TRUE and NO or N for FALSE');
-  question4 = question4.toLowerCase();
-  if (question4 === 'yes' || question4 === 'y') {
-    // console.log('Correct');
-    alert('Correct');
-    results.push(true);
-  } else if (question4 === 'no' || question4 === 'n') {
-    // console.log('Incorrect');
-    alert('Incorrect');
-    results.push(false);
-  } else {
-    // console.log('Invalid answer');
-    alert('Invalid answer');
-    results.push(false);
-  }
-
-  // question 5
-  let question5 = prompt('Is this true: Eventually, I would like to be unemployed? Answer with YES or Y for TRUE and NO or N for FALSE');
-  question5 = question5.toLowerCase();
-  if (question5 === 'no' || question5 === 'n') {
-    // console.log('Correct');
-    alert('Correct');
-    alert('I don\'t want to be unemployed but rather self-employed');
-    results.push(true);
-  } else if (question5 === 'yes' || question5 === 'y') {
-    // console.log('Incorrect');
-    alert('Incorrect');
-    alert('I don\'t want to be unemployed but rather self-employed');
-    results.push(false);
-  } else {
-    // console.log('Invalid answer');
-    alert('Invalid answer');
-    results.push(false);
-  }
-*/
   // question 6
   let question6 = prompt('Now let\'s try something different...What is my favorite number? Answer with a NUMBER between 1 and 10.');
   question6 = parseInt(question6);
