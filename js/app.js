@@ -12,14 +12,21 @@ function guessingGame() {
   alert('Alright, ' + userName + ', let\'s get started!');
   let results = [];
 
+let question1 = ['Is this true: I\'m an Army Veteran? Answer with YES or Y for TRUE and NO or N for FALSE', 'yes', 'y', 'no', 'n'];
+let question2 = ['Is this true: I don\'t currently have any formal degrees but have attended some college? Answer with YES or Y for TRUE and NO or N for FALSE', 'yes', 'y', 'no', 'n'];
+let question3 = ['Is this true: My favorite color is yellow? Answer with YES or Y for TRUE and NO or N for FALSE', 'no', 'n', 'yes', 'y'];
+let question4 = ['Is this true: I think Penguins are the cutest things to ever exist? Answer with YES or Y for TRUE and NO or N for FALSE', 'yes', 'y', 'no', 'n'];
+let question5 = ['Is this true: Eventually, I would like to be unemployed? Answer with YES or Y for TRUE and NO or N for FALSE', 'no', 'n', 'yes', 'y'];
+
   // question 1
-  let question1 = prompt('Is this true: I\'m an Army Veteran? Answer with YES or Y for TRUE and NO or N for FALSE');
-  question1 = question1.toLowerCase();
-  if (question1 === 'yes' || question1 === 'y') {
+  function askQuestion(question) {
+  let response = prompt(question[0]);
+  response = response.toLowerCase();
+  if (response === question[1] || response === question[2]) {
     // console.log('Correct');
     alert('Correct');
     results.push(true);
-  } else if (question1 === 'no' || question1 === 'n') {
+  } else if (response === question[3] || response === question[4]) {
     // console.log('Incorrect');
     alert('Incorrect');
     results.push(false);
@@ -28,8 +35,17 @@ function guessingGame() {
     alert('Invalid answer');
     results.push(false);
   }
+  }
+ 
 
-  // question 2
+  for(let i = 0; i < 5; i += 1) {
+    let questionHolder = [question1, question2, question3, question4, question5];
+
+    askQuestion(questionHolder[i]);
+  }
+
+
+ /* // question 2
   let question2 = prompt('Is this true: I don\'t currently have any formal degrees but have attended some college? Answer with YES or Y for TRUE and NO or N for FALSE');
   question2 = question2.toLowerCase();
   if (question2 === 'yes' || question2 === 'y') {
@@ -100,7 +116,7 @@ function guessingGame() {
     alert('Invalid answer');
     results.push(false);
   }
-
+*/
   // question 6
   let question6 = prompt('Now let\'s try something different...What is my favorite number? Answer with a NUMBER between 1 and 10.');
   question6 = parseInt(question6);
