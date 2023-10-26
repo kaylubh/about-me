@@ -10,6 +10,6 @@ A simple website to introduce myself to the user. This page is learning tool to 
 
 ### Lighthouse Accessibility Report Score
 
-![Lighthouse report](img/about-me-lighthouse-report.png)
+![Lighthouse report](img/about-me-lighthouse-report-2.png)
 
 ### Reflections and Comments
