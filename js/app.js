@@ -167,6 +167,5 @@ function guessingGame() {
     }
   }
   console.log(correctAnswers);
-  let resultsScore = correctAnswers.length;
-  alert('You got ' + resultsScore + ' out of ' + results.length + ' questions correct!');
+  alert('You got ' + correctAnswers.length + ' out of ' + results.length + ' questions correct!');
 }
