@@ -8,7 +8,7 @@ alert('Hi ' + userName + '! Welcome to my about me page.');
 let button = document.getElementById('playGame');
 button.addEventListener('click', guessingGame);
 
-function guessingGame (){
+function guessingGame() {
   alert('Alright, ' + userName + ', let\'s get started!');
   let results = [];
 
@@ -135,7 +135,7 @@ function guessingGame (){
   let question7Counter = 0;
   let question7CorrectAnswer;
   while (question7Counter < 5 && question7CorrectAnswer !== true) {
-    for (let i=0; i < question7Answers.length; i++) {
+    for (let i = 0; i < question7Answers.length; i++) {
       if (question7Answers[i] === question7) {
         alert('Correct!');
         question7CorrectAnswer = true;
@@ -161,12 +161,12 @@ function guessingGame (){
 
   // generate final score
   let correctAnswers = [];
-  for (let i=0; i < results.length; i++) {
+  for (let i = 0; i < results.length; i++) {
     if (results[i] === true) {
       correctAnswers.push(results[i]);
     }
   }
   console.log(correctAnswers);
   let resultsScore = correctAnswers.length;
-  alert('You got ' + resultsScore + ' out of 7 questions correct!');
+  alert('You got ' + resultsScore + ' out of ' + results.length + ' questions correct!');
 }
