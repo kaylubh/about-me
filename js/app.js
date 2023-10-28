@@ -23,15 +23,12 @@ function guessingGame() {
     let response = prompt(question[0]);
     response = response.toLowerCase();
     if (response === question[1] || response === question[2]) {
-      // console.log('Correct');
       alert('Correct');
       results.push(true);
     } else if (response === question[3] || response === question[4]) {
-      // console.log('Incorrect');
       alert('Incorrect');
       results.push(false);
     } else {
-      // console.log('Invalid answer');
       alert('Invalid answer');
       results.push(false);
     }
